@@ -1,0 +1,24 @@
+<nav class="navbar" [class.scrolled]="isScrolled" id="main-nav">
+    <div class="nav-inner">
+        <a class="nav-logo" (click)="scrollTo('hero', $event)">DA</a>
+
+        <ul class="nav-links">
+            <li><a (click)="scrollTo('hero', $event)" [class.active]="activeSection === 'hero'">About</a></li>
+            <li><a (click)="scrollTo('projects', $event)" [class.active]="activeSection === 'projects'">Projects</a>
+            </li>
+        </ul>
+
+        <!-- Mobile hamburger -->
+        <button class="nav-hamburger" (click)="toggleMobile()" [class.open]="mobileOpen" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+
+    <!-- Mobile menu overlay -->
+    <div class="nav-mobile" [class.open]="mobileOpen">
+        <a (click)="scrollTo('hero', $event)">Home</a>
+        <a (click)="scrollTo('projects', $event)">Projects</a>
+    </div>
+</nav>

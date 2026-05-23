@@ -1,10 +1,12 @@
 import { Component, signal, AfterViewInit, OnDestroy, ElementRef, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { Navbar } from '../components/navbar';
+import { Navbar } from '../components/navbar/navbar';
+import { TypingEffect } from '../components/TypingEffect/TypingEffect';
+
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Navbar],
+  imports: [RouterOutlet, Navbar, TypingEffect],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })

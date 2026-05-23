@@ -1,21 +1,44 @@
 /* ===== NAVBAR ===== */
+
+/*
+  :host is the <app-navbar> custom element Angular injects.
+  display:block gives it normal block flow but it has no size impact
+  because .navbar inside is position:fixed (out of flow entirely).
+*/
+:host {
+  display: block;
+}
+
 .navbar {
-  position: fixed;
+  /* Start absolute so it scrolls away with the hero section naturally */
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
   z-index: 100;
-  padding: 1rem 2rem;
-  transition: background 0.4s ease, box-shadow 0.4s ease, padding 0.3s ease;
+  padding: 1.5rem 2rem;
+  background: transparent;
+  transition: padding 0.3s ease;
 }
 
-/* Solid background on scroll */
+/* Fixed background on scroll with a snap/slide-down animation */
 .navbar.scrolled {
-  background: rgba(23, 16, 20, 0.75);
+  position: fixed;
+  background: rgba(23, 16, 20, 0.85);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
   padding: 0.7rem 2rem;
+  animation: navSlideDown 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes navSlideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
 }
 
 .nav-inner {

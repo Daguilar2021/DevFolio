@@ -12,8 +12,8 @@ export class Navbar {
 
     @HostListener('window:scroll')
     onScroll(): void {
-        // Add background when scrolled past 50px
-        this.isScrolled = window.scrollY > 50;
+        // Trigger the fixed "snapped" navbar after scrolling past the initial view (e.g., 200px)
+        this.isScrolled = window.scrollY > 200;
 
         // Determine which section is currently in view
         const sections = ['projects', 'hero']; // check bottom-up

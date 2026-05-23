@@ -170,11 +170,52 @@
   font-size: 1.125rem;
   color: #cbd5e1;
   font-weight: 300;
-  margin-bottom: 2rem;
   max-width: 28rem;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto 2rem;
   line-height: 1.75;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn-hero {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-hero-github {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-hero-github:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.btn-hero-linkedin {
+  background: linear-gradient(135deg, #ffc0cb, #f472b6);
+  color: #171014;
+  box-shadow: 0 4px 15px rgba(244, 114, 182, 0.3);
+}
+
+.btn-hero-linkedin:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(244, 114, 182, 0.4);
+  filter: brightness(1.1);
 }
 
 /* ====== ABOUT SECTION ===== */

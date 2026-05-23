@@ -1,6 +1,12 @@
 {
   "buildCommand": "npm run build",
-  "outputDirectory": "dist/web-app",
+  "outputDirectory": "dist/web-app/browser",
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
 }

@@ -370,6 +370,14 @@
   -webkit-text-fill-color: transparent;
 }
 
+.contact-description {
+  text-align: center;
+  font-size: 1.125rem;
+  color: #19010a;
+  max-width: 32rem;
+  line-height: 1.75;
+  margin: 0 auto 2.5rem;
+}
 .contact-card {
   position: relative;
   background: rgba(182, 31, 112, 0.377);

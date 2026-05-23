@@ -3,9 +3,10 @@
         <a class="nav-logo" (click)="scrollTo('hero', $event)">DA</a>
 
         <ul class="nav-links">
-            <li><a (click)="scrollTo('hero', $event)" [class.active]="activeSection === 'hero'">About</a></li>
-            <li><a (click)="scrollTo('projects', $event)" [class.active]="activeSection === 'projects'">Projects</a>
-            </li>
+            <li><a (click)="scrollTo('hero', $event)" [class.active]="activeSection === 'hero'">Home</a></li>
+            <li><a (click)="scrollTo('about', $event)" [class.active]="activeSection === 'about'">About</a></li>
+            <li><a (click)="scrollTo('projects', $event)" [class.active]="activeSection === 'projects'">Projects</a></li>
+            <li><a (click)="scrollTo('contact', $event)" [class.active]="activeSection === 'contact'">Contact</a></li>
         </ul>
 
         <!-- Mobile hamburger -->

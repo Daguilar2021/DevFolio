@@ -16,7 +16,7 @@ export class Navbar {
         this.isScrolled = window.scrollY > 200;
 
         // Determine which section is currently in view
-        const sections = ['projects', 'hero']; // check bottom-up
+        const sections = ['projects', 'about', 'hero']; // check bottom-up
         for (const id of sections) {
             const el = document.getElementById(id);
             if (el) {

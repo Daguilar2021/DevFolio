@@ -177,8 +177,50 @@
   line-height: 1.75;
 }
 
-.hero-subtitle animation {
-  
+/* ====== ABOUT SECTION ===== */
+.about-section {
+  position: relative;
+  width: 100%;
+  min-height: 80vh;
+  background: #F7EDE8;
+  color: #fff;
+  padding: 6rem 2rem;
+}
+
+.about-inner {
+  max-width: 72rem;
+  margin: 0 auto;
+}
+
+.about-label {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #971f61;
+  margin-bottom: 1rem;
+  padding: 0.35rem 1rem;
+  border-radius: 9999px;
+  background: rgba(255, 192, 213, 0.307);
+  border: 1px solid rgba(255, 192, 203, 0.777);
+}
+
+.about-heading {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: linear-gradient(to right, #971f61, #f9a8d4);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.about-description {
+  font-size: 1.125rem;
+  color: #19010a;
+  max-width: 36rem;
+  line-height: 1.75;
 }
 
 /* ===== PROJECTS SECTION ===== */
@@ -287,6 +329,116 @@
   flex-wrap: wrap;
   gap: 0.4rem;
   margin-bottom: 1.25rem;
+}
+
+/* ===== CONTACT SECTION ===== */
+.contact-section {
+  position: relative;
+  width: 100%;
+  background: #F7EDE8;
+  color: #fff;
+  padding: 6rem 2rem 8rem;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-inner {
+  max-width: 42rem;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-label {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #f472b6;
+  margin-bottom: 1rem;
+}
+
+.contact-heading {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  margin-bottom: 2rem;
+  letter-spacing: -0.02em;
+  background: linear-gradient(to right, #971f61, #f9a8d4);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.contact-card {
+  position: relative;
+  background: rgba(182, 31, 112, 0.377);
+  border: 1px solid rgba(104, 24, 68, 0.622);
+  border-radius: 1.5rem;
+  padding: 3rem;
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+  color: rgba(54, 5, 27, 0.8);
+  font-size: 1.1rem;
+}
+
+.contact-info-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.contact-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn-email, .btn-linkedin {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-email {
+  background: linear-gradient(135deg, #ffc0cb, #f472b6);
+  color: #171014;
+  box-shadow: 0 4px 15px rgba(244, 114, 182, 0.3);
+}
+
+.btn-email:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(244, 114, 182, 0.4);
+  filter: brightness(1.1);
+}
+
+.btn-linkedin {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-linkedin:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
 }
 
 .tag {

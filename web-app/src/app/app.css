@@ -129,11 +129,16 @@
   font-size: clamp(2.5rem, 5vw, 3.5rem);
   font-weight: 800;
   letter-spacing: -0.025em;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  margin-left: -0.1rem;
+  margin-right: -0.1rem;
+  padding: 0.2rem 0.1rem;
   background: linear-gradient(to right, #ffffff, #fce7f3, #f9a8d4);
   background-clip: text;
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  line-height: 1.1;
+  line-height: 1.2;
+  overflow: visible;
 }
 
 .hero-subtitle {

@@ -145,21 +145,35 @@
     display: flex;
   }
 
+  /* Two distinct states for navbar when opened on mobile */
+  .navbar.opened:not(.scrolled) {
+    background: rgba(23, 16, 20, 0.95);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+
+  .navbar.opened.scrolled {
+    background: rgba(23, 16, 20, 0.98);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  }
+
   .nav-mobile {
     display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
     padding: 1rem 0 0.5rem;
     max-height: 0;
     overflow: hidden;
     opacity: 0;
-    transition: max-height 0.35s ease, opacity 0.3s ease, padding 0.3s ease;
+    transition: max-height 0.35s ease, padding 0.3s ease;
   }
 
   .nav-mobile.open {
     max-height: 300px;
     opacity: 1;
-    padding: 1rem 0;
+    padding: 1rem 0.5rem 0.5rem;
   }
 
   .nav-mobile a {

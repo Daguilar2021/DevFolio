@@ -13,7 +13,7 @@ export class Navbar {
     @HostListener('window:scroll')
     onScroll(): void {
         // Trigger the fixed "snapped" navbar after scrolling past the initial view (e.g., 200px)
-        this.isScrolled = window.scrollY > 200;
+        this.isScrolled = window.scrollY > 100;
 
         // Determine which section is currently in view
         const sections = ['contact', 'projects', 'about', 'hero']; // check bottom-up

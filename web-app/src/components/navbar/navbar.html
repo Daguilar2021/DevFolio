@@ -1,4 +1,4 @@
-<nav class="navbar" [class.scrolled]="isScrolled" id="main-nav">
+<nav class="navbar" [class.scrolled]="isScrolled" [class.opened]="mobileOpen" id="main-nav">
     <div class="nav-inner">
         <a class="nav-logo" (click)="scrollTo('hero', $event)">DA</a>
 
@@ -20,6 +20,8 @@
     <!-- Mobile menu overlay -->
     <div class="nav-mobile" [class.open]="mobileOpen">
         <a (click)="scrollTo('hero', $event)">Home</a>
+        <a (click)="scrollTo('about', $event)">About</a>
         <a (click)="scrollTo('projects', $event)">Projects</a>
+        <a (click)="scrollTo('contact', $event)">Contact</a>
     </div>
 </nav>

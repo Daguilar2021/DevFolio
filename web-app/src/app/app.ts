@@ -12,6 +12,7 @@ import { TypingEffect } from '../components/TypingEffect/TypingEffect';
 })
 export class App implements AfterViewInit, OnDestroy {
   protected readonly title = signal('my-devfolio');
+  protected photoAnimationRunning = false;
 
   private el = inject(ElementRef);
   private observer?: IntersectionObserver;
@@ -35,5 +36,21 @@ export class App implements AfterViewInit, OnDestroy {
 
   ngOnDestroy(): void {
     this.observer?.disconnect();
+  }
+
+  protected playPhotoAnimation(): void {
+    if (this.photoAnimationRunning) {
+      return;
+    }
+
+    this.photoAnimationRunning = true;
+  }
+
+  protected finishPhotoAnimation(event: AnimationEvent): void {
+    const target = event.target as HTMLElement | null;
+
+    if (event.animationName === 'turner' && target?.classList.contains('one49')) {
+      this.photoAnimationRunning = false;
+    }
   }
 }
